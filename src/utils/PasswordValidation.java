@@ -7,7 +7,7 @@ public class PasswordValidation {
 
         if (!password.chars().anyMatch(c -> Character.isUpperCase(c)))
             return false;
-        if (!password.matches(".*[!@#$%^&*)(].*"))
+        if (!password.matches(".*[!@#$%^&*)(.?].*"))
             return false;
         return true;
     }
