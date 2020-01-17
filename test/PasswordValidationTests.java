@@ -25,4 +25,9 @@ public class PasswordValidationTests {
         assertFalse(PasswordValidation.validate("hhellohello"));
     }
 
+    @Test
+    void passwordShouldHaveAtLeast1Specialchar(){
+        assertTrue(PasswordValidation.validate("Hello!"));
+        assertFalse(PasswordValidation.validate("Hell"));
+    }
 }
