@@ -9,19 +9,25 @@ public class PasswordValidationTests {
 
     @Test
     void passwordShouldBeMoreThan5chars() {
-        assertTrue(PasswordValidation.validate("Hello"));
-        assertFalse(PasswordValidation.validate("hell"));
+        assertTrue(PasswordValidation.validate("Hello2"));
+        assertFalse(PasswordValidation.validate("hel2"));
     }
 
     @Test
     void passwordShouldNotBeMoreThan15chars() {
-        assertTrue(PasswordValidation.validate("helLohello"));
-        assertFalse(PasswordValidation.validate("hellohellohellohello"));
+        assertTrue(PasswordValidation.validate("helLohello2"));
+        assertFalse(PasswordValidation.validate("hellohellohellohello2"));
     }
 
     @Test
     void passwordShouldHaveAtLeaast1uppercase() {
-        assertTrue(PasswordValidation.validate("Hellohello"));
+        assertTrue(PasswordValidation.validate("Hellohello2"));
+        assertFalse(PasswordValidation.validate("hhellohello2"));
+    }
+
+    @Test
+    void passwordShouldHaveAtLeast1SpecialCharacter(){
+        assertTrue(PasswordValidation.validate("Hellohello2"));
         assertFalse(PasswordValidation.validate("hhellohello"));
     }
 
