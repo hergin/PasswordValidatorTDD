@@ -8,6 +8,9 @@ public class PasswordValidation {
         if (!password.chars().anyMatch(c -> Character.isUpperCase(c)))
             return false;
 
+        if (!password.chars().anyMatch(c -> !Character.isLetterOrDigit(c)))
+            return false;
+
         return true;
     }
 }
