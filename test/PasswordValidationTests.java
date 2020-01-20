@@ -20,9 +20,18 @@ public class PasswordValidationTests {
     }
 
     @Test
-    void passwordShouldHaveAtLeaast1uppercase() {
+    void passwordShouldHaveAtLeast1uppercase() {
         assertTrue(PasswordValidation.validate("Hellohello"));
         assertFalse(PasswordValidation.validate("hhellohello"));
     }
 
+    @Test
+    void passwordShouldHaveAtLeast1SpecialCharacter() {
+        assertTrue(PasswordValidation.validate("Hellohello!"));
+        assertFalse(PasswordValidation.validate("Hellohello"));
+
+
+    }
 }
+
+
