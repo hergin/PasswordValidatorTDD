@@ -8,6 +8,14 @@ public class PasswordValidation {
         if (!password.chars().anyMatch(c -> Character.isUpperCase(c)))
             return false;
 
+        char[] specialCharacter = {'!','@','#','$','%','^','&','*'};
+        for (int i = 0; i < (password.length() - 1); i++) {
+            for (int j = 0; i < specialCharacter.length; i++){
+                if (password.charAt(i) == specialCharacter[j]){
+                    return true;
+                }
+            }
+        }
         return true;
     }
 }
