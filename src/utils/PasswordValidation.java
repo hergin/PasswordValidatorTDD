@@ -22,6 +22,7 @@ public class PasswordValidation {
                 password.contains("}") || password.contains("~")) {
         } else {
             return false;
+            
         }
 
 
